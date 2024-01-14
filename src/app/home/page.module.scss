@@ -1,0 +1,15 @@
+.leftPanel {
+  height: 100vh;
+  background-color: #313866;
+
+  &_websiteLogo {
+    padding: 24px;
+    width: 100%;
+  }
+
+  &_menu {
+    font-size: 15px;
+    width: 100%;
+    background-color: #313866;
+  }
+}
