@@ -305,7 +305,9 @@ const WorldMap = () => {
             borderLeft: '1px solid lightGrey',
           }}
         >
-          <Typography  style={{margin: '5px 0 5px 5px'}}>Filter by</Typography>
+          <Typography style={{ margin: '5px 0 5px 5px' }}>
+            Filter by
+          </Typography>
           <Radio.Group
             onChange={onChangeGender}
             value={gender}

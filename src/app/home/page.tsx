@@ -16,6 +16,8 @@ import MenuItem from 'antd/es/menu/MenuItem';
 import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
 import WorldMap from '../pages/map';
+import { HorizontalBar } from '../pages/horizontalBar';
+import { HorizontalChart } from '../pages/horizontalChart';
 
 type MenuItem = Required<MenuProps>['items'][number];
 
@@ -37,7 +39,10 @@ function getItem(
 
 const items: MenuItem[] = [
   getItem('Home', '1', <MailOutlined />),
-  getItem('Charts', '2', <AppstoreOutlined />),
+  getItem('Charts', '2', <AppstoreOutlined />, [
+    getItem('Maps', '3'),
+    getItem('Bar chart', '4'),
+  ]),
   getItem('Profile', 'sub3', <SettingOutlined />, [
     getItem('Settings', '9'),
     getItem('Log out', '10'),
@@ -54,8 +59,6 @@ export default function HomePage({}: Props) {
 
   // }
 
-
-
   return (
     <>
       <Row>
@@ -71,7 +74,8 @@ export default function HomePage({}: Props) {
         </Col>
 
         <Col span={20}>
-          <WorldMap />
+          {/* <WorldMap /> */}
+          <HorizontalChart />
         </Col>
       </Row>
     </>
