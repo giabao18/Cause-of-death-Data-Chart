@@ -1,6 +1,6 @@
 'use client';
 import { assets } from '@/assets/assets';
-import styles from './page.module.scss';
+import styles from './layout.module.scss';
 import {
   PieChartOutlined,
   DesktopOutlined,
@@ -74,8 +74,8 @@ export default function HomePage({}: Props) {
         </Col>
 
         <Col span={20}>
-          {/* <WorldMap /> */}
-          <HorizontalChart />
+          <WorldMap />
+          {/* <HorizontalChart /> */}
         </Col>
       </Row>
     </>

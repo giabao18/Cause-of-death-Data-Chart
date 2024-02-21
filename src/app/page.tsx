@@ -1,7 +1,7 @@
 import AppHeader from '@/components/header/app.header';
 import { Button, ConfigProvider, Layout } from 'antd';
 import Image from 'next/image';
-import HomePage from './home/page';
+import HomePage from './layout/layout';
 import { configTheme } from '@/components/theme/app.theme';
 
 export default function Home() {

@@ -1,3 +1,4 @@
+'use client';
 import {
   Checkbox,
   Col,
@@ -150,7 +151,6 @@ export const HorizontalChart = () => {
                     if (gender === 'Female') return 'rgba(255, 159, 64, 0.8)';
                     else return 'rgba(255, 205, 86, 0.8)';
                   },
-               
                 },
               ],
             },
@@ -167,9 +167,9 @@ export const HorizontalChart = () => {
                 tooltip: {
                   callbacks: {
                     label: function (context) {
-                        const label = context.label || '';
-                        const value = context.parsed.x || 0;
-                        return `${label}: ${value}%`;
+                      const label = context.label || '';
+                      const value = context.parsed.x || 0;
+                      return `${label}: ${value}%`;
                     },
                   },
                 },
@@ -199,7 +199,7 @@ export const HorizontalChart = () => {
           fontWeight: 'bold',
         }}
       >
-        World Chart Cause of death in {year}
+        World Horizontal Chart Cause of death in {year}
       </Typography.Title>
       <Row style={{ display: 'flex' }}>
         <Col span={20}>

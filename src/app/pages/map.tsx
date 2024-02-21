@@ -13,7 +13,7 @@ import { Input } from 'postcss';
 import test from 'node:test';
 // import topojson from 'topojson-client';
 
-interface IDataType {
+export interface IDataType {
   'Country Code': string;
   Country: string;
   Year: number;
@@ -89,19 +89,9 @@ const WorldMap = () => {
       .select('.mapDraw')
       .attr('width', '100%')
       .attr('height', '100%');
-    // .attr('transform', 'translate(' + padding.left + ',' + padding.top + ')');
 
     svg.selectAll('path').remove();
 
-    // Promise.all([
-    //   d3.json(
-    //     'https://raw.githubusercontent.com/holtzy/D3-graph-gallery/master/DATA/world.geojson',
-    //   ),
-    //   d3.json('http://localhost:8000/2019'),
-    // ]).then(function (loadData) {
-
-    // const dataValue: Array<IDataType> = loadData[1] as Array<IDataType>;
-    // let topo: FeatureCollection = loadData[0] as FeatureCollection;
     if (
       dataMap1 !== undefined &&
       dataMap2 !== undefined &&
@@ -199,13 +189,7 @@ const WorldMap = () => {
         ]);
       path = path.projection(projection);
 
-      // add a rectangle to see the bound of the svg
-      // svg
-      //   .append('rect')
-      //   .attr('width', width)
-      //   .attr('height', height)
-      //   .style('stroke', 'black')
-      //   .style('fill', 'none');
+
 
       const Tooltip = d3.select('.tooltip');
 

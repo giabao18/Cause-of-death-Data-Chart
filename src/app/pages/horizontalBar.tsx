@@ -167,13 +167,13 @@ export const HorizontalBar = () => {
         .append('div')
         .style('overflow-y', 'scroll')
         .style('-webkit-overflow-scrolling', 'touch')
-        .style('display','block');
+        .style('display', 'block');
 
       const svgChart = body
         .append('svg')
         .attr('width', '100%')
-        .attr('height',  height * 6)
-        // .style('display', 'block');
+        .attr('height', height * 6);
+      // .style('display', 'block');
 
       svgChart
         .selectAll('rect')
@@ -192,7 +192,7 @@ export const HorizontalBar = () => {
   }, [run, gender, ageRange, causeOfDeath, year]);
 
   return (
-    <div style={{height: 1200}}>
+    <div style={{ height: 1200 }}>
       <Typography.Title
         level={2}
         style={{
@@ -207,7 +207,11 @@ export const HorizontalBar = () => {
         <Col span={20}>
           <div
             className="horizontalBar"
-            style={{ margin: '20px 0 0 20px', height: '85vh' ,display: 'block'}}
+            style={{
+              margin: '20px 0 0 20px',
+              height: '85vh',
+              display: 'block',
+            }}
           >
             {/* <svg className="xAxis"></svg>
             <div className="scroll"></div> */}
